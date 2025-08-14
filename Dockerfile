@@ -1,7 +1,8 @@
 FROM python:3.10-slim-bullseye
 WORKDIR /app/
 COPY . /app/
-RUN pip install --no-cache-dir -r fastapi_project\requirements.txt
+
+RUN pip install --no-cache-dir -r fastapi_project/requirements.txt
 RUN pip install fastapi uvicorn[standard]
 EXPOSE 8000
 ENV PYTHONUNBUFFERED=1
